@@ -71,9 +71,11 @@ class ZoomViewWeb extends ZoomPlatform {
   }
 
   /// Generate Signatue for zoom signate required to perform join and start functions
-  String generateSignature(
-      String apiKey, String apiSecret, String meetingNumber, int role) {
-    final timestamp = DateTime.now().millisecondsSinceEpoch - 30000;
+  String generateSignature(String apiKey, String apiSecret,
+      String meetingNumber, int role) {
+    final timestamp = DateTime
+        .now()
+        .millisecondsSinceEpoch - 30000;
     var str = '$apiKey$meetingNumber$timestamp$role';
     var bytes = utf8.encode(str);
     final msg = base64.encode(bytes);

@@ -91,54 +91,53 @@ class ZoomOptions {
 
   /// --Meeting Info for web
 
-  ZoomOptions(
-      {required this.domain,
-      this.appKey,
-      this.appSecret,
-      this.language = "en-US",
-      this.showMeetingHeader = true,
-      this.disableInvite = false,
-      this.disableCallOut = false,
-      this.disableRecord = false,
-      this.disableJoinAudio = false,
-      this.audioPanelAlwaysOpen = false,
-      this.isSupportAV = true,
-      this.isSupportChat = true,
-      this.isSupportQA = true,
-      this.isSupportCC = true,
-      this.isSupportPolling = true,
-      this.isSupportBreakout = true,
-      this.screenShare = true,
-      this.rwcBackup = '',
-      this.videoDrag = true,
-      this.sharingMode = 'both',
-      this.videoHeader = true,
-      this.isLockBottom = true,
-      this.isSupportNonverbal = true,
-      this.isShowJoiningErrorDialog = true,
-      this.disablePreview = false,
-      this.disableCORP = true,
-      this.inviteUrlFormat = '',
-      this.disableVOIP = false,
-      this.disableReport = false,
-      this.meetingInfo = const [
-        'topic',
-        'host',
-        'mn',
-        'pwd',
-        'telPwd',
-        'invite',
-        'participant',
-        'dc',
-        'enctype',
-        'report'
-      ]});
+  ZoomOptions({required this.domain,
+    this.appKey,
+    this.appSecret,
+    this.language = "en-US",
+    this.showMeetingHeader = true,
+    this.disableInvite = false,
+    this.disableCallOut = false,
+    this.disableRecord = false,
+    this.disableJoinAudio = false,
+    this.audioPanelAlwaysOpen = false,
+    this.isSupportAV = true,
+    this.isSupportChat = true,
+    this.isSupportQA = true,
+    this.isSupportCC = true,
+    this.isSupportPolling = true,
+    this.isSupportBreakout = true,
+    this.screenShare = true,
+    this.rwcBackup = '',
+    this.videoDrag = true,
+    this.sharingMode = 'both',
+    this.videoHeader = true,
+    this.isLockBottom = true,
+    this.isSupportNonverbal = true,
+    this.isShowJoiningErrorDialog = true,
+    this.disablePreview = false,
+    this.disableCORP = true,
+    this.inviteUrlFormat = '',
+    this.disableVOIP = false,
+    this.disableReport = false,
+    this.meetingInfo = const [
+      'topic',
+      'host',
+      'mn',
+      'pwd',
+      'telPwd',
+      'invite',
+      'participant',
+      'dc',
+      'enctype',
+      'report'
+    ]});
 }
 
 /// Basic Zoom Meeting Options required for plugin (WEB, iOS, Android)
 class ZoomMeetingOptions {
   String? userEmail;
-  
+
   /// User email For Join Meeting & Host Email For Start Meeting
   String? userId;
 
@@ -156,7 +155,7 @@ class ZoomMeetingOptions {
 
   /// Personal meeting passcode for start meeting required
   String? disableDialIn;
-  
+
   /// Disable Dial In Mode
   String? disableMinimizeMeeting;
 

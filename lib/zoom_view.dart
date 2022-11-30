@@ -7,7 +7,7 @@ class ZoomView extends ZoomPlatform {
 
   /// The event channel used to interact with the native platform.
   final EventChannel eventChannel =
-      const EventChannel('com.evilratt/zoom_sdk_event_stream');
+  const EventChannel('com.evilratt/zoom_sdk_event_stream');
 
   /// The event channel used to interact with the native platform init function
   @override
@@ -36,7 +36,8 @@ class ZoomView extends ZoomPlatform {
     optionMap.putIfAbsent("userPassword", () => options.userPassword);
     optionMap.putIfAbsent("meetingId", () => options.meetingId);
     optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn);
-    optionMap.putIfAbsent("disableMinimizeMeeting", () => options.disableMinimizeMeeting);
+    optionMap.putIfAbsent(
+        "disableMinimizeMeeting", () => options.disableMinimizeMeeting);
     optionMap.putIfAbsent("disableDrive", () => options.disableDrive);
     optionMap.putIfAbsent("disableInvite", () => options.disableInvite);
     optionMap.putIfAbsent("disableShare", () => options.disableShare);
@@ -59,7 +60,8 @@ class ZoomView extends ZoomPlatform {
     optionMap.putIfAbsent("meetingId", () => options.meetingId);
     optionMap.putIfAbsent("meetingPassword", () => options.meetingPassword);
     optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn);
-    optionMap.putIfAbsent("disableMinimizeMeeting", () => options.disableMinimizeMeeting);
+    optionMap.putIfAbsent(
+        "disableMinimizeMeeting", () => options.disableMinimizeMeeting);
     optionMap.putIfAbsent("disableDrive", () => options.disableDrive);
     optionMap.putIfAbsent("disableInvite", () => options.disableInvite);
     optionMap.putIfAbsent("disableShare", () => options.disableShare);
@@ -72,7 +74,7 @@ class ZoomView extends ZoomPlatform {
         .invokeMethod<bool>('join', optionMap)
         .then<bool>((bool? value) => value ?? false);
   }
-  
+
   /// The event channel used to interact with the native platform returnToMeeting function
   @override
   Future<bool> returnToMeeting() async {
@@ -89,7 +91,8 @@ class ZoomView extends ZoomPlatform {
     optionMap.putIfAbsent("userId", () => options.userId);
     optionMap.putIfAbsent("userPassword", () => options.userPassword);
     optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn);
-    optionMap.putIfAbsent("disableMinimizeMeeting", () => options.disableMinimizeMeeting);
+    optionMap.putIfAbsent(
+        "disableMinimizeMeeting", () => options.disableMinimizeMeeting);
     optionMap.putIfAbsent("disableDrive", () => options.disableDrive);
     optionMap.putIfAbsent("disableInvite", () => options.disableInvite);
     optionMap.putIfAbsent("disableShare", () => options.disableShare);

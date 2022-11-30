@@ -8,7 +8,9 @@ abstract class ZoomPlatform extends PlatformInterface {
   ZoomPlatform() : super(token: _token);
   static final Object _token = Object();
   static ZoomPlatform _instance = ZoomView();
+
   static ZoomPlatform get instance => _instance;
+
   static set instance(ZoomPlatform instance) {
     PlatformInterface.verifyToken(instance, _token);
     _instance = instance;
@@ -33,7 +35,7 @@ abstract class ZoomPlatform extends PlatformInterface {
   Future<bool> joinMeeting(ZoomMeetingOptions options) async {
     throw UnimplementedError('joinMeeting() has not been implemented.');
   }
-  
+
   /// Flutter Zoom SDK Return To Meeting function
   Future<bool> returnToMeeting() async {
     throw UnimplementedError('returnToMeeting() has not been implemented.');
